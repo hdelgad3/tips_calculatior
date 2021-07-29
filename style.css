@@ -1,0 +1,95 @@
+:root{
+    --primary-color: hsl(172, 67%, 45%);
+    --veryDark-cyan: hsl(183, 100%, 15%);
+    --darkerGrey-cyan: hsl(186, 14%, 43%);
+    --darkGrey-cyan: hsl(184, 14%, 56%);
+    --lightGrey-cyan: hsl(185, 41%, 84%);
+    --lighterGrey-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --body-form-font: 24px;
+    --font-family1: 'Space Mono';
+    --weights-400: 400;
+    --weights-500: 500;
+    --weights-700: 700;
+
+}
+body{
+    background-color: var(--white);
+    
+    
+}
+.container{
+    background-color: var(--lightGrey-cyan);
+    height: 70vh; 
+    width: 60vw;
+    box-shadow: 0 20px 12px  rgba(0,0,0,0.10);
+    position: relative;
+    top: 150px;
+    display: grid;
+    place-items: center;
+}
+input{
+    text-align: right;
+}
+.logo{
+    height: 6vh;
+    padding: 3rem 0 0 0;
+}
+.center{
+    background-color: var(--white);
+    width: 35vw;
+    height: 30vh;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+   align-items: center;
+}
+.interact{
+    display: grid;
+    align-items: center;
+    font-family: var(--font-family1);
+    color: var(--darkerGrey-cyan);
+    font-weight: var(--weights-700);
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr 2fr;
+    overflow: auto;
+    
+}
+.bill #billForm{
+    background: url(images/icon-dollar.svg) no-repeat scroll left;
+    background-color: var(--lighterGrey-cyan);
+    font-size: var(--body-form-font);
+    border-width: 0;
+}
+.numPeople #numPpl{
+    background: url(images/icon-person.svg) no-repeat scroll left;
+    background-color: var(--lighterGrey-cyan);
+    font-size: var(--body-form-font);
+    border-width: 0;
+}
+.selectTip{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.display{
+    background-color: var(--veryDark-cyan);
+    display: grid;
+    align-self: center;
+    font-family: var(--font-family1);
+    grid-template-columns: 1fr;
+    width: 12vw;
+    height: 25vh;
+    border-radius: 10px;
+}
+.tipAmount, .billTotal{
+    color: var(--white);
+}
+.attribution{
+    position: absolute;
+    bottom:0;
+    left: 700px;
+    font-family: var(--font-family1);
+}

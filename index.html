@@ -4,19 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel='stylesheet' type='text/css' />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel='stylesheet' href='style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
 
-  Bill
+  <section class='container'>
+    <img src='./images/logo.svg' alt='logo' class='logo' />
+    <article class='center' >
+      <!--UserInteraction-->
+      <div class='interact'>
+        <div class='bill'>
+          <form>
+            <label for='billForm'>Bill</label>
+            <input type='text' id='billForm' name='billy' placeholder='0'type='number'/>
+          </form>
+        </div>
+        <!--tip btns-->
+        <div class='selectTip'>
+          Select Tip %
+          <button class='percBtn btn' dataId='5%'>5%</button>
+          <button class='percBtn btn' dataId='10%'>10%</button>
+          <button class='percBtn btn' dataId='15$'>15$</button>
+          <button class='percBtn btn' dataId='25%'>25%</button>
+          <button class='percBtn btn' dataId='50%'>50%</button>
+          <button class='percBtn btn' dataId='custom'>custom</button>
+        </div>
+        <div class='numPeople'>
+          <form>
+            <label for='numPpl'>Number of People</label>
+            <input type='text' id='numPpl' name='ppl' placeholder='0' type='number'/>
+          </form>
+        </div>
+      <!--Calculation display-->
+      </div>
+      <div class='display' >
+        <div class='tipAmount' >
+          Tip Amount
+          / person
+        </div>
+        <div class='billTotal'>
+          Total
+         / person
+        </div>
+        <!--Reset btn-->
+        
+      </div>
+
+    </article>
+  </section>
+
+  <!-- Bill
 
   Select Tip %
   5%
@@ -34,11 +80,12 @@
   Total
   / person
 
-  Reset
+  Reset -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://twitter.com/Irllydo" rel='noopener noreferrer' target='_blank'>Hector Delgado</a>.
   </div>
+  <script src='app.js'></script>
 </body>
 </html>
