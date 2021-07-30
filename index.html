@@ -36,7 +36,9 @@
           <button class='percBtn btn' dataId='15%'>15%</button>
           <button class='percBtn btn' dataId='25%'>25%</button>
           <button class='percBtn btn' dataId='50%'>50%</button>
-          <button class='custBtn btn' dataId='custom'>Custom</button>
+          <form>
+            <input type='number' id='cust' placeholder="Custom" dataId='cust' name='tip'/>
+          </form>
         </div>
         <div class='numPeople'>
           <form>
@@ -47,16 +49,24 @@
       </div>
       <!--Calculation display-->
       <div class='display' >
-        <div class='tipAmount' >
+        <div class='text1' >
           Tip Amount
           / person
         </div>
+        <div class='tipAmount'>
+          $0.00
+        </div>
+        <div class='text2'>
+        Total
+        / person
+        </div>
         <div class='billTotal'>
-          Total
-         / person
+          $0.00
         </div>
         <!--Reset btn-->
-        
+        <div class='reset'>
+          <button class='resetBtn btn'>RESET</button>
+        </div>
       </div>
 
     </article>
