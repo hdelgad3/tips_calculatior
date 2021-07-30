@@ -25,27 +25,27 @@
         <div class='bill'>
           <form>
             <label for='billForm'>Bill</label>
-            <input type='text' id='billForm' name='billy' placeholder='0'type='number'/>
+            <input type='number' id='billForm' name='billy' placeholder='0' required/>
           </form>
         </div>
         <!--tip btns-->
         <div class='selectTip'>
-          Select Tip %
+          <h5>Select Tip %</h5>
           <button class='percBtn btn' dataId='5%'>5%</button>
           <button class='percBtn btn' dataId='10%'>10%</button>
-          <button class='percBtn btn' dataId='15$'>15$</button>
+          <button class='percBtn btn' dataId='15%'>15%</button>
           <button class='percBtn btn' dataId='25%'>25%</button>
           <button class='percBtn btn' dataId='50%'>50%</button>
-          <button class='percBtn btn' dataId='custom'>custom</button>
+          <button class='custBtn btn' dataId='custom'>Custom</button>
         </div>
         <div class='numPeople'>
           <form>
             <label for='numPpl'>Number of People</label>
-            <input type='text' id='numPpl' name='ppl' placeholder='0' type='number'/>
+            <input type='number' id='numPpl' name='ppl' placeholder='0' required/>
           </form>
         </div>
-      <!--Calculation display-->
       </div>
+      <!--Calculation display-->
       <div class='display' >
         <div class='tipAmount' >
           Tip Amount
