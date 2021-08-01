@@ -17,17 +17,13 @@
 body{
     background-color: var(--white);
 }
-h5{
-    grid-area: 1/1/2/4;
-}
-
 .container{
     background-color: var(--lightGrey-cyan);
     height: 80vh; 
     width: 60vw;
     box-shadow: 0 20px 12px  rgba(0,0,0,0.10);
     position: relative;
-    top: 120px;
+    top: 119px;
     display: grid;
     place-items: center;
 }
@@ -49,7 +45,7 @@ input[type=number]::-webkit-inner-spin-button{
     height: 40vh;
     border-radius: 15px;
     display:flex;
-    flex-direction: row;
+    place-items: center;
    /* overflow: auto; */
 }
 .interact{
@@ -57,13 +53,13 @@ input[type=number]::-webkit-inner-spin-button{
     align-items: center;
     font-family: var(--font-family1);
     color: var(--darkerGrey-cyan);
-    font-weight: var(--weights-700);
+    font-weight: var(--weights-500);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 16vw;
-    height: 30vh;
+    height: 35vh;
     margin: 0 auto;
-    padding: 1em;
+    
     
 }
 .bill{
@@ -80,6 +76,7 @@ numPeople{
     border-width: 0;
     color:var(--veryDark-cyan);
     text-align: right;
+   
 }
 #numPpl{
     background: url(images/icon-person.svg) no-repeat scroll 15px;
@@ -93,18 +90,24 @@ numPeople{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 12px;
+    margin-top: 1rem;
 }
 .percBtn{
     color: var(--white);
     background-color: var(--veryDark-cyan);
     border-radius: 10px;
+    font-weight: var(--weights-600)!important;
+    font-size: 1.5em!important;
+    height: 4.5rem;
+    text-align: center;
 }
 #cust{
     background-color: var(--lighterGrey-cyan);
     border-width: 0;
     color:var(--veryDark-cyan);
     width: 10rem;
+    height: 4.5rem;
     text-align: center;
     font-size: var(--body-form-font);
 }
@@ -117,7 +120,7 @@ numPeople{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 16vw;
-    height: 30vh;
+    height: 35vh;
     border-radius: 10px;
     margin: 0 auto;
     padding: 1rem;
@@ -125,7 +128,7 @@ numPeople{
 }
 .tipAmount, .billTotal{
     color: var(--primary-color);
-    font-size: var(--body-form-font);
+    font-size: 4rem;
     font-weight: var(--weights-700);
 }
 .tipAmount{
@@ -150,6 +153,8 @@ numPeople{
 .resetBtn{
     background-color: var(--primary-color);
     color: var(--veryDark-cyan);
+    font-weight: var(--weights-700)!important;
+    width: 10vw;
 }
 .attribution{
     position: absolute;
