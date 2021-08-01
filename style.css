@@ -13,6 +13,16 @@
   --weights-500: 500;
   --weights-700: 700;
 }
+p{
+  color: var(--white);
+  font-family: var(--font-family1);
+  font-size: 0.8em;
+}
+span{
+  color: var(--darkGrey-cyan);
+  font-family: var(--font-family1);
+  font-size: 0.7.5em;
+}
 body {
   background-color: var(--white);
   display: flex;
@@ -56,9 +66,10 @@ body {
   background-color: var(--primary-color);
   height: 245px;
   width: 240px;
-  display: flex;
 }
+.inputContainer{
 
+}
 /* END Input and Form Display */
 
 /* Calculations Display */
@@ -68,6 +79,26 @@ body {
   width: 240px;
   border-radius: 6px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calcContainer{
+  height: 180px;
+  width: 200px;
+  display:grid;
+
+}
+
+.tipCalc{
+
+}
+.totalCalc{
+
+}
+.resetBtn{
+  background-color: var(--primary-color);
+
 }
 
 /* END Calculations Display */
