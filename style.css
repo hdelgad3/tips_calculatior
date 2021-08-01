@@ -13,6 +13,27 @@
   --weights-500: 500;
   --weights-700: 700;
 }
+p{
+  color: var(--white);
+  font-family: var(--font-family1);
+  font-size: 0.8em;
+}
+span{
+  color: var(--darkGrey-cyan);
+  font-family: var(--font-family1);
+  font-size: 0.8em;
+}
+form{
+  font-family: var(--font-family1);
+  color: var(--darkerGrey-cyan);
+}
+input{
+  width: 240px;
+  border-width: 0;
+  text-align: right;
+  caret-color: var(--primary-color);
+  
+}
 body {
   background-color: var(--white);
   display: flex;
@@ -22,8 +43,8 @@ body {
   width: 100vw;
 }
 .logo {
-  height: auto;
-  width: 3.5vw;
+  height: 3vh;
+  width: 3vw;
   max-width: 100%;
 }
 .container {
@@ -31,43 +52,119 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 550px;
-  flex-basis: 800px;
+  height: 650px;
+  flex-basis: 900px;
   flex-direction: column;
-  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 15px 1px rgba(0, 0, 0, 0.1);
 }
 
 .center {
   background-color: var(--white);
-  height: 250px;
-  width: 500px;
+  height: 280px;
+  width: 550px;
   border-radius: 12px;
   margin-top: 3.4em;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  box-shadow: 0 5px 9px  rgba(0, 0, 0, 0.05);
 }
 
 /*  Input and Form Display */
 
 .inputDisplay {
-  height: 200px;
-  width: 210px;
+  height: 245px;
+  width: 240px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.inputContainer{
+  background-color: var(--white);
+  height: auto;
+  max-width: 100%;
+}
+#bill{
+  background: url(images/icon-dollar.svg) no-repeat scroll 15px ;
+  color:var(--veryDark-cyan);
+  font-size: var(--body-form-font);
+  background-color: var(--lighterGrey-cyan);
+  font-weight: var(--weights-700);
 
+}
+#people{
+  background: url(images/icon-person.svg) no-repeat scroll 15px;
+  color:var(--veryDark-cyan);
+  font-size: var(--body-form-font);
+  background-color: var(--lighterGrey-cyan);
+  font-weight: var(--weights-700);
+}
 /* END Input and Form Display */
+
 
 /* Calculations Display */
 .calcDisplay {
   background-color: var(--veryDark-cyan);
-  height: 200px;
-  width: 210px;
+  height: 245px;
+  width: 240px;
   border-radius: 6px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.calcContainer{
+  height: 180px;
+  width: 205px;
+  display:grid;
+  grid-template-areas:
+  'text1 .  . tip'
+  'text2 . . total'
+  'btn btn btn btn';
+}
+
+.tipText{
+  grid-area: text1;
+  padding-top: 9px;
+  
+}
+.tipCalc{
+  color: var(--primary-color);
+  font-family: var(--font-family1);
+  grid-area: tip;
+  font-size: 2.1em;
+  font-weight: var(--weights-700);
+  margin-bottom: 10px;
+  
+}
+
+.totalText{
+  grid-area: text2;
+  margin-top: 9px;
+  margin-bottom: 50px;
+
+}
+.totalCalc{
+  color: var(--primary-color);
+  font-family: var(--font-family1);
+  grid-area: total;
+  font-size: 2.1em;
+  font-weight: var(--weights-700);
+  margin-bottom: 70px;
+}
+
+.resetBtn{
+  background-color: var(--primary-color);
+  color: var(--veryDark-cyan);
+  font-weight: var(--weights-600);
+  font-family: var(--font-family1);
+  grid-area: btn;
+  height: 30px;
+}
+.resetBtn:hover{
+  background-color: var(--lightGrey-cyan);
+}
 /* END Calculations Display */
 
 .attribution {

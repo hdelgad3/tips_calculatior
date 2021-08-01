@@ -32,8 +32,54 @@
     <section class="container">
       <img src="./images/logo.svg" alt="logo" class="logo" />
       <article class="center">
-        <div class="inputDisplay">a</div>
-        <div class="calcDisplay">b</div>
+
+        <div class="inputDisplay">
+          
+          <div class='inputContainer'>
+            <!--Forms and buttons-->
+            <form name='billForm'>
+              <label for='bill'>Bill</label>
+              <input type='text' id='bill' name='billInput' placeholder="0"/>
+            </form>
+
+            <form name='peopleForm'>
+              <label for='people'>Number of People</label>
+              <input type='text' id='people' name='numPeople' placeholder="0"/>
+            </form>
+
+           <!-- END OF Forms and buttons-->
+          </div>
+
+        </div>
+
+        <div class="calcDisplay">
+
+          <div class='calcContainer'>
+            <!--Calculations and reset btn-->
+
+          <div class='tipText'>
+            <p>Tip Amount<br/><span>/ person</span></p>
+          </div>
+
+          <div class='tipCalc'>
+            $0.00
+          </div>
+
+          <div class='totalText'>
+            <p>Total<br/><span>/ person</span></p>
+          </div>
+
+          <div class='totalCalc'>
+            $0.00
+          </div>
+
+          <button class='resetBtn btn btn-block'>RESET</button>
+
+          <!--END OFCalculations and reset btn-->
+          </div>
+
+        </div>
+
       </article>
     </section>
 
