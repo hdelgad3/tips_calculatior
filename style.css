@@ -31,6 +31,8 @@ input{
   width: 240px;
   border-width: 0;
   text-align: right;
+  caret-color: var(--primary-color);
+  
 }
 body {
   background-color: var(--white);
@@ -89,6 +91,7 @@ body {
   font-size: var(--body-form-font);
   background-color: var(--lighterGrey-cyan);
   font-weight: var(--weights-700);
+
 }
 #people{
   background: url(images/icon-person.svg) no-repeat scroll 15px;
@@ -158,6 +161,9 @@ body {
   font-family: var(--font-family1);
   grid-area: btn;
   height: 30px;
+}
+.resetBtn:hover{
+  background-color: var(--lightGrey-cyan);
 }
 /* END Calculations Display */
 
