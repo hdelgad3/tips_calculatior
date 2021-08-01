@@ -23,6 +23,15 @@ span{
   font-family: var(--font-family1);
   font-size: 0.8em;
 }
+form{
+  font-family: var(--font-family1);
+  color: var(--darkerGrey-cyan);
+}
+input{
+  width: 240px;
+  border-width: 0;
+  text-align: right;
+}
 body {
   background-color: var(--white);
   display: flex;
@@ -63,12 +72,30 @@ body {
 /*  Input and Form Display */
 
 .inputDisplay {
-  background-color: var(--primary-color);
   height: 245px;
   width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inputContainer{
-
+  background-color: var(--white);
+  height: auto;
+  max-width: 100%;
+}
+#bill{
+  background: url(images/icon-dollar.svg) no-repeat scroll 15px ;
+  color:var(--veryDark-cyan);
+  font-size: var(--body-form-font);
+  background-color: var(--lighterGrey-cyan);
+  font-weight: var(--weights-700);
+}
+#people{
+  background: url(images/icon-person.svg) no-repeat scroll 15px;
+  color:var(--veryDark-cyan);
+  font-size: var(--body-form-font);
+  background-color: var(--lighterGrey-cyan);
+  font-weight: var(--weights-700);
 }
 /* END Input and Form Display */
 
@@ -86,7 +113,7 @@ body {
 
 .calcContainer{
   height: 180px;
-  width: 200px;
+  width: 205px;
   display:grid;
   grid-template-areas:
   'text1 .  . tip'
