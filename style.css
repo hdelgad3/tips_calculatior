@@ -109,13 +109,49 @@ body {
   grid-template-areas:
     "title . ."
     "btn5 btn10 btn15"
-    "btn25 50btn form";
+    "btn25 btn50 custom";
+  grid-gap: 5px;
+}
+h5{
+  grid-area: title;
+  font-family: var(--font-family1);
+  color: var(--darkerGrey-cyan);
+
+}
+#fiveP{
+  grid-area: btn5;
+}
+#tenP{
+  grid-area: btn10;
+}
+#fivetP{
+  grid-area: btn15;
+}
+#twefP{
+  grid-area: btn25;
+}
+#fiftyP{
+  grid-area: btn50;
+}
+.custT{
+  grid-area: custom;
+}
+#cust{
+  background-color: var(--lighterGrey-cyan);
+  width: 8rem;
+  height: 3rem;
+  
+  color: var(--veryDark-cyan);
+  font-size: var(--body-form-font);
+  background-color: var(--lighterGrey-cyan);
+  font-weight: var(--weights-700);
 }
 .percBtn {
   background-color: var(--veryDark-cyan);
   color: var(--white);
   font-family: var(--font-family1);
-  width: 100px;
+  width: 80px;
+  height: 3rem;
 }
 /* END Input and Form Display */
 

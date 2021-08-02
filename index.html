@@ -41,15 +41,14 @@
             </form>
 
             <div class="groupBtn">
-              Select Tip %
-              <button class="percBtn btn">5%</button>
-              <button class="percBtn btn">10%</button>
-              <button class="percBtn btn">15%</button>
-              <button class="percBtn btn">25%</button>
-              <button class="percBtn btn">50%</button>
-              <form>
-                <label for="cust">Custom</label>
-                <input type="text" id="cust" />
+              <h5>Select Tip %</h6>
+              <button class="percBtn btn" type='button' dataId='5%' id='fiveP'>5%</button>
+              <button class="percBtn btn" type='button' dataId='10%' id='tenP'>10%</button>
+              <button class="percBtn btn" type='button' dataId='15%' id='fivetP'>15%</button>
+              <button class="percBtn btn" type='button' dataId='25%' id='twefP'>25%</button>
+              <button class="percBtn btn" type='button' dataId='50%' id='fiftyP'>50%</button>
+              <form name='customTip' class='custT'>
+                <input type="text" id="cust" placeholder="Custom"/>
               </form>
             </div>
 
@@ -78,7 +77,7 @@
 
             <div class="totalCalc">$0.00</div>
 
-            <button class="resetBtn btn">RESET</button>
+            <button class="resetBtn btn" type='button'>RESET</button>
 
             <!--END OFCalculations and reset btn-->
           </div>
