@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel='stylesheet' type='text/css' />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel='stylesheet' href='style.css' />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
-</head>
-<body>
-  <section class='container'>
-    <img src='./images/logo.svg' alt='logo' class='logo' />
-    <article class='center' >
-      <!--UserInteraction-->
-      <div class='interact'>
-        <div class='bill'>
-          <form>
-            <label for='billForm'>Bill</label>
-            <input type='number' id='billForm' name='billy' placeholder='0' required/>
-          </form>
+  <body>
+    <section class="container">
+      <img src="./images/logo.svg" alt="logo" class="logo" />
+      <article class="center">
+
+        <div class="inputDisplay">         
+          <div class="inputContainer">
+            <!--Forms and buttons-->
+
+            <form class='billForm' name="billForm" >
+              <label for="bill">Bill</label>
+              <input type="number" id="bill" name="billInput" placeholder="0" />
+            </form>
+
+             <form class="btnForm" name='percGroup' >
+              <label for='5%' class='labelP'>Select Tip %</label>
+              <input class="percBtn btn" type='button' data-Id='.05' id='fiveP' value='5%' />
+              <input class="percBtn btn" type='button' data-Id='.10' id='tenP' value='10%' />
+              <input class="percBtn btn" type='button' data-Id='.15' id='fivetP' value='15%' />
+              <input class="percBtn btn" type='button' data-Id='.25' id='twefP' value='25%' />
+              <input class="percBtn btn" type='button' data-Id='.50' id='fiftyP' value='50%' />
+              <input type="number" name='customTip' data-Id='custom' id="cust" placeholder="Custom" required min='10' required max='100' />
+            </form>
+            
+            <form class='peopleForm' name="peopleForm" >
+              <label for="people">Number of People</label>
+              <input type="number" id="people" name="numPeople" placeholder="0" />
+            </form>
+
+            <!-- END OF Forms and buttons-->
+          </div>
         </div>
-        <!--tip btns-->
-        <h5>Select Tip %</h5>
-        <div class='selectTip'>
-          <button class='percBtn btn' dataId='5%'>5%</button>
-          <button class='percBtn btn' dataId='10%'>10%</button>
-          <button class='percBtn btn' dataId='15%'>15%</button>
-          <button class='percBtn btn' dataId='25%'>25%</button>
-          <button class='percBtn btn' dataId='50%'>50%</button>
-          <form>
-            <input type='number' id='cust' placeholder="Custom" dataId='cust' name='tip'/>
-          </form>
-        </div>
-        <div class='numPeople'>
-          <form>
-            <label for='numPpl'>Number of People</label>
-            <input type='number' id='numPpl' name='ppl' placeholder='0' required/>
-          </form>
-        </div>
-      </div>
-      <!--Calculation display-->
-      <div class='display' >
-        <div class='text1' >
-          Tip Amount
-          / person
-        </div>
-        <div class='tipAmount'>
-          $0.00
-        </div>
-        <div class='text2'>
-        Total
-        / person
-        </div>
-        <div class='billTotal'>
-          $0.00
-        </div>
-        <!--Reset btn-->
-        <div class='reset'>
-          <button class='resetBtn btn'>RESET</button>
-        </div>
-      </div>
 
-    </article>
-  </section>
+        <div class="calcDisplay">
+          <div class="calcContainer">
+            <!--Calculations and reset btn-->
 
-  <!-- Bill
+            <div class="tipText">
+              <p>Tip Amount<br /><span>/ person</span></p>
+            </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+            <div class="tipCalc">$0.00</div>
 
-  Number of People
+            <div class="totalText">
+              <p>Total<br /><span>/ person</span></p>
+            </div>
 
-  Tip Amount
-  / person
+            <div class="totalCalc">$0.00</div>
 
-  Total
-  / person
+            <button class="resetBtn btn" type='button'>RESET</button>
 
-  Reset -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://twitter.com/Irllydo" rel='noopener noreferrer' target='_blank'>Hector Delgado</a>.
-  </div>
-  <script src='app.js'></script>
-</body>
+            <!--END OFCalculations and reset btn-->
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://twitter.com/Irllydo"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Hector Delgado</a
+      >.
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
