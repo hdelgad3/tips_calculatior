@@ -26,6 +26,7 @@ span {
 form {
   font-family: var(--font-family1);
   color: var(--darkerGrey-cyan);
+  font-size: 0.9em;
 }
 input {
   width: 240px;
@@ -33,6 +34,11 @@ input {
   text-align: right;
   caret-color: var(--primary-color);
   border-width: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 input:focus {
   border: 2px solid var(--primary-color);
@@ -103,20 +109,23 @@ body {
   background-color: var(--lighterGrey-cyan);
   font-weight: var(--weights-700);
 }
-
-.groupBtn {
+.billForm{
+ margin-bottom: 20px;
+}
+.peopleForm{
+  margin-top: 5px;;
+}
+.btnForm {
   display: grid;
   grid-template-areas:
-    "title . ."
+    "title title ."
     "btn5 btn10 btn15"
     "btn25 btn50 custom";
   grid-gap: 5px;
+  margin-bottom: 20px;
 }
-h5{
+.labelP{
   grid-area: title;
-  font-family: var(--font-family1);
-  color: var(--darkerGrey-cyan);
-
 }
 #fiveP{
   grid-area: btn5;
@@ -133,16 +142,13 @@ h5{
 #fiftyP{
   grid-area: btn50;
 }
-.custT{
-  grid-area: custom;
-}
 #cust{
   background-color: var(--lighterGrey-cyan);
   width: 8rem;
   height: 3rem;
-  
+  grid-area: custom;
   color: var(--veryDark-cyan);
-  font-size: var(--body-form-font);
+  font-size: 1.5em;
   background-color: var(--lighterGrey-cyan);
   font-weight: var(--weights-700);
 }
@@ -152,6 +158,13 @@ h5{
   font-family: var(--font-family1);
   width: 80px;
   height: 3rem;
+  font-weight: var(--weights-500);
+}
+.percBtn:hover, .percBtn:focus{
+  color: var(--veryDark-cyan);
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
 }
 /* END Input and Form Display */
 
@@ -214,6 +227,10 @@ h5{
 }
 .resetBtn:hover {
   background-color: var(--lightGrey-cyan);
+}
+.resetBtn:focus{
+  border: none;
+  outline: none;
 }
 /* END Calculations Display */
 

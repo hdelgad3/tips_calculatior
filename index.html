@@ -32,29 +32,29 @@
     <section class="container">
       <img src="./images/logo.svg" alt="logo" class="logo" />
       <article class="center">
-        <div class="inputDisplay">
+
+        <div class="inputDisplay">         
           <div class="inputContainer">
             <!--Forms and buttons-->
-            <form name="billForm">
+
+            <form class='billForm' name="billForm" >
               <label for="bill">Bill</label>
-              <input type="text" id="bill" name="billInput" placeholder="0" />
+              <input type="number" id="bill" name="billInput" placeholder="0" />
             </form>
 
-            <div class="groupBtn">
-              <h5>Select Tip %</h6>
-              <button class="percBtn btn" type='button' dataId='5%' id='fiveP'>5%</button>
-              <button class="percBtn btn" type='button' dataId='10%' id='tenP'>10%</button>
-              <button class="percBtn btn" type='button' dataId='15%' id='fivetP'>15%</button>
-              <button class="percBtn btn" type='button' dataId='25%' id='twefP'>25%</button>
-              <button class="percBtn btn" type='button' dataId='50%' id='fiftyP'>50%</button>
-              <form name='customTip' class='custT'>
-                <input type="text" id="cust" placeholder="Custom"/>
-              </form>
-            </div>
-
-            <form name="peopleForm">
+             <form class="btnForm" name='percGroup' >
+              <label for='5%' class='labelP'>Select Tip %</label>
+              <input class="percBtn btn" type='button' data-Id='.05' id='fiveP' value='5%' />
+              <input class="percBtn btn" type='button' data-Id='.10' id='tenP' value='10%' />
+              <input class="percBtn btn" type='button' data-Id='.15' id='fivetP' value='15%' />
+              <input class="percBtn btn" type='button' data-Id='.25' id='twefP' value='25%' />
+              <input class="percBtn btn" type='button' data-Id='.50' id='fiftyP' value='50%' />
+              <input type="number" name='customTip' data-Id='custom' id="cust" placeholder="Custom" required min='10' required max='100' />
+            </form>
+            
+            <form class='peopleForm' name="peopleForm" >
               <label for="people">Number of People</label>
-              <input type="text" id="people" name="numPeople" placeholder="0" />
+              <input type="number" id="people" name="numPeople" placeholder="0" />
             </form>
 
             <!-- END OF Forms and buttons-->
@@ -84,26 +84,6 @@
         </div>
       </article>
     </section>
-
-    <!-- Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset -->
 
     <div class="attribution">
       Challenge by
