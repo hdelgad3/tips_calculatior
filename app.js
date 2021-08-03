@@ -1,3 +1,5 @@
+// const inputTag = document.querySelectorAll('input[name="billInput"]');
+// console.log(inputTag);
 // Input display
 const bill = document.getElementById('bill');
 const percBtns = document.querySelectorAll('.percBtn');
@@ -7,19 +9,26 @@ const people = document.getElementById('people');
 const resetBtn = document.querySelector('.resetBtn');
 const tip = document.querySelector('.tipCalc');
 const total = document.querySelector('.totalCalc');
+
+//forms
+const billForm = document.querySelector('.billForm');
+const peopleForm = document.querySelector('.peopleForm');
+
 //Error Labels
 const billError = document.querySelector('.errorLabel1');
 const peopleError = document.querySelector('.errorLabel2');
 
-// billError.parentNode.removeChild(billError);
-// peopleError.parentNode.removeChild(peopleError);
-
-// billError.parentNode.appendChild(billError);
+// console.log(billForm.childNodes);
+billForm.removeChild(billError);
+// console.log(billForm.childNodes);
+// billForm.insertBefore(billError, bill);
+// console.log(billForm.childNodes);
 
 let inputBill = 0;
 let inputTip = 0;
 let inputPeople = 0;
 const billValues = [];
+const tipValues = [];
 
 
 // bill input
@@ -30,11 +39,22 @@ bill.addEventListener('input', (e)=>{
     checkBill(key);
 });
 
+// loop through percbtn nodelist and print the value when clicked
+for(let i = 0; i < percBtns.length; i++){
+    percBtns[i].addEventListener('click',(e)=>{
+        // console.log(e.currentTarget.value);
+        let perc = e.target.dataset.id;
+        console.log(perc);
+    })
+}
 
 // custom tip input
 customTip.addEventListener('input',(e)=>{
-    console.log(e.target.value);
-    console.log(e.target.dataset);
+    let custom = e.target.value;
+    custom = parseFloat(custom/100);
+    // console.log(custom);
+    checkTip(custom);
+    // console.log(e.target.dataset);
 });
 
 // amount of people
@@ -47,16 +67,9 @@ people.addEventListener('input',(e)=>{
     }
 });
 
-// loop through percbtn nodelist and print the value when clicked
-for(let i = 0; i < percBtns.length; i++){
-    percBtns[i].addEventListener('click',(e)=>{
-        console.log(e.currentTarget.value);
-        console.log(e.target.dataset);
-
-    })
-}
 
 // Functions
+
 const checkArray = (arr,val) =>{
     if(arr.length === 0){
         arr.push(val);
@@ -68,15 +81,25 @@ const checkArray = (arr,val) =>{
     return arr;
 }
 
-const checkBill = bill =>{
-    checkArray(billValues, bill);
+const checkBill = val =>{
+    checkArray(billValues, val);
     //console.log(billValues);
     inputBill= billValues[0];
     // console.log(inputBill);
     if(inputBill === 0){
-        console.log('1614564564564');
+        billForm.insertBefore(billError, bill);
+        
     }
-    
+    else{
+        billForm.removeChild(billError);
+    }  
+};
+
+const checkTip = val =>{
+    checkArray(tipValues, val);
+    inputTip = val;
+    console.log(inputTip);
+    console.log(tipValues);
 };
 
 
