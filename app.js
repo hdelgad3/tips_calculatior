@@ -8,6 +8,7 @@ const total = document.querySelector('.totalCalc');
 
 
 
+
 bill.addEventListener('input', (e)=>{
     // console.log(e.data);
     console.log(e.target.value);
@@ -20,11 +21,6 @@ customTip.addEventListener('input',(e)=>{
     console.log(e.target.dataset);
 });
 
-people.addEventListener('keyup',(event)=>{
-    if(event === 13){
-        event.preventDefault();
-    }
-});
 people.addEventListener('input',(e)=>{
     let key = e.target.value;
     console.log(key);
