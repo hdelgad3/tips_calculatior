@@ -167,7 +167,7 @@ body {
   border: none;
   outline: none;
 }
-.errorLabel{
+.errorLabel1, .errorLabel2{
   color: red;
   margin-left: 3.5em;
 }
@@ -245,6 +245,10 @@ body {
   font-family: var(--font-family1);
 }
 
+
+
+
+/******************************************MOBILE VIEW************************************/
 @media (max-width: 375px){
   p {
     color: var(--white);
@@ -424,8 +428,6 @@ body {
   height: 50px;
   outline: none;
 }
-  
-
   .attribution {
     display:none;
     

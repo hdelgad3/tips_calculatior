@@ -37,12 +37,12 @@
           <div class="inputContainer">
             <!--Forms and buttons-->
 
-            <form class='billForm' name="billForm" >
-              <label for="bill">Bill</label> <label for='bill' class='errorLabel'>Can't be zero!</label>
-              <input type="number" id="bill" name="billInput" placeholder="0" />
+            <form class='billForm' name="billForm" onsubmit="return false" >
+              <label for="bill">Bill</label> <label for='bill' class='errorLabel1'>Can't be zero!</label>
+              <input type="number" id="bill" name="billInput" placeholder="0" step=".01"/>
             </form>
 
-             <form class="btnForm" name='percGroup' >
+             <form class="btnForm" name='percGroup' onsubmit="return false">
               <label for='5%' class='labelP'>Select Tip %</label>
               <input class="percBtn btn" type='button' data-Id='.05' id='fiveP' value='5%' />
               <input class="percBtn btn" type='button' data-Id='.10' id='tenP' value='10%' />
@@ -52,9 +52,9 @@
               <input type="number" name='customTip' data-Id='custom' id="cust" placeholder="Custom" required min='10' required max='100' />
             </form>
             
-            <form class='peopleForm' name="peopleForm" >
-              <label for="people">Number of People</label> <label for='people' class='errorLabel'>Can't be zero!</label>
-              <input type="number" id="people" name="numPeople" placeholder="0" />
+            <form class='peopleForm' name="peopleForm" onsubmit="return false">
+              <label for="people">Number of People</label> <label for='people' class='errorLabel2' >Can't be zero!</label>
+              <input type="number" id="people" name="numPeople" placeholder="0" step='.01'/>
             </form>
 
             <!-- END OF Forms and buttons-->
@@ -94,7 +94,7 @@
         href="https://twitter.com/Irllydo"
         rel="noopener noreferrer"
         target="_blank"
-        >Hector Delgado</a
+        >Hector D</a
       >.
     </div>
     <script src="app.js"></script>
