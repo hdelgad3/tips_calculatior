@@ -29,8 +29,6 @@ billError.style.visibility = 'hidden';
 peopleError.style.visibility = 'hidden';
 
 
-
-
 // bill input
 bill.addEventListener('input', (e)=>{
     let key = e.target.value;
@@ -43,7 +41,7 @@ bill.addEventListener('input', (e)=>{
     else{
         billError.style.visibility = 'hidden';
         bill.style.border = '2px solid var(--primary-color)';
-        // calculateAmount(key);
+        calculateAmount(key);
     }
 });
 
@@ -52,20 +50,22 @@ bill.addEventListener('input', (e)=>{
 for(let i = 0; i < percBtns.length; i++){
     percBtns[i].addEventListener('click',(e)=>{
         let perc = e.target.dataset.id;
-        
+        perc = parseFloat(perc);
+        calculateTip(perc);
     })
 }
 // custom tip input
 customTip.addEventListener('input',(e)=>{
     let custom = e.target.value;
     custom = parseFloat(custom/100);
+    calculateTip(custom);
     
 });
 
 // amount of people
 people.addEventListener('input',(e)=>{
     let key = e.target.value;
-    key = parseFloat(key);
+    key = parseInt(key);
     if(key === 0){
         peopleError.style.visibility = 'visible';
         people.style.border = '2px solid red';
@@ -73,17 +73,25 @@ people.addEventListener('input',(e)=>{
     else{
         peopleError.style.visibility = 'hidden';
         people.style.border = '2px solid var(--primary-color)';
+        calculatePeople(key);
     }
 });
 
+
+// -----------------------------------------------------FUNCTIONS-------------------------------------------
 const calculateAmount = givenBill =>{
     console.log(givenBill);
     return calculateTip = givenTip =>{
-        return calculatePeople =>{
-            console.log('yeaaaa');
+        console.log(givenTip);
+        return calculatePeople = (givenPeople = 1) =>{
+            console.log(givenPeople);
+            console.log('all three params given!');
+            
         }
     }
 }
+
+
 
 
 
