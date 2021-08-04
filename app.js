@@ -13,6 +13,7 @@ const total = document.querySelector('.totalCalc');
 //forms
 const billForm = document.querySelector('.billForm');
 const peopleForm = document.querySelector('.peopleForm');
+const btnForm = document.querySelector('.btnForm');
 
 //Error Labels
 const billError = document.querySelector('.errorLabel1');
@@ -39,7 +40,6 @@ bill.addEventListener('input', (e)=>{
     }
 });
 
-
 // loop through percbtn nodelist and print the value when clicked
 for(let i = 0; i < percBtns.length; i++){
     percBtns[i].addEventListener('click',(e)=>{
@@ -47,7 +47,7 @@ for(let i = 0; i < percBtns.length; i++){
         perc = parseFloat(perc);
         calculateTip(perc);
     })
-}
+};
 // custom tip input
 customTip.addEventListener('input',(e)=>{
     let custom = e.target.value;
@@ -78,6 +78,18 @@ people.addEventListener('input',(e)=>{
 });
 
 
+resetBtn.addEventListener('click', ()=>{
+    billForm.reset();
+    btnForm.reset();
+    peopleForm.reset();
+    tip.innerHTML = '$0.00';
+    total.innerHTML = '$0.00';
+    bill.style.border = 'none';
+    billError.style.visibility = 'hidden';
+    people.style.border = 'none';
+    peopleError.style.visibility = 'hidden';
+    customTip.style.border = 'none';
+});
 
 
 // -----------------------------------------------------FUNCTIONS-------------------------------------------

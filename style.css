@@ -32,9 +32,10 @@ input {
   width: 240px;
   border-width: 0;
   text-align: right;
-  caret-color: var(--primary-color);
   border-width: 0;
   cursor: pointer;
+  outline: none;
+  border:none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -43,6 +44,7 @@ input::-webkit-inner-spin-button {
 }
 input:focus {
   border: 2px solid var(--primary-color);
+  caret-color: var(--primary-color);
   outline: none;
 }
 
