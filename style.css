@@ -253,7 +253,7 @@ body {
 
 
 /******************************************MOBILE VIEW************************************/
-@media (max-width: 375px){
+@media (max-width: 415px){
   p {
     color: var(--white);
     font-family: var(--font-family1);
@@ -280,24 +280,25 @@ body {
   }
 
   .logo {
-    height: 3em;
-    width: 6em;
+    height: 3.5em;
+    width: 3.5em;
     max-width: 100%;
+    padding-top: 10px;
   }
   .container {
     background-color: var(--lightGrey-cyan);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
-    flex-basis: 375px;
+    height: 825px;
+    flex-basis: 414px;
     flex-direction: column;
     box-shadow: 0 15px 15px 1px rgba(0, 0, 0, 0.1);
   }
   
   .center {
     background-color: var(--white);
-    height: 700px;
+    height: 650px;
     width: 375px;
     border-radius: 15px;
     display: grid;
