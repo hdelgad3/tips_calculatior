@@ -18,12 +18,6 @@ const peopleForm = document.querySelector('.peopleForm');
 const billError = document.querySelector('.errorLabel1');
 const peopleError = document.querySelector('.errorLabel2');
 
-// // console.log(billForm.childNodes);
-// billForm.removeChild(billError);
-// // console.log(billForm.childNodes);
-// // billForm.insertBefore(billError, bill);
-// // console.log(billForm.childNodes);
-// peopleForm.removeChild(peopleError);
 
 billError.style.visibility = 'hidden';
 peopleError.style.visibility = 'hidden';
@@ -58,7 +52,13 @@ for(let i = 0; i < percBtns.length; i++){
 customTip.addEventListener('input',(e)=>{
     let custom = e.target.value;
     custom = parseFloat(custom/100);
-    calculateTip(custom);
+    if(custom > 100 || custom <= 0) {
+        customTip.style.border = '2px solid red';
+    }
+    else{
+        customTip.style.border = '2px solid var(--primary-color)'
+        calculateTip(custom);
+    }
     
 });
 
@@ -78,19 +78,38 @@ people.addEventListener('input',(e)=>{
 });
 
 
+
+
 // -----------------------------------------------------FUNCTIONS-------------------------------------------
 const calculateAmount = givenBill =>{
-    console.log(givenBill);
+    
     return calculateTip = givenTip =>{
-        console.log(givenTip);
+        
         return calculatePeople = (givenPeople = 1) =>{
-            console.log(givenPeople);
-            console.log('all three params given!');
-            
+
+            if(isNaN(givenPeople)){
+                tip.innerHTML = '$0.00';
+                total.innerHTML = '$0.00';
+            }
+            else {
+                let tipAmountPerPerson = Math.round((((givenBill*givenTip) / givenPeople)+Number.EPSILON)*100)/100;
+                // console.log(tipAmountPerPerson);
+
+                let totalPerPerson = Math.round((((givenBill/givenPeople) + tipAmountPerPerson)+Number.EPSILON)*100)/100;
+                // console.log(totalPerPerson);
+
+                if(!isNaN(tipAmountPerPerson) && !isNaN(totalPerPerson)){
+                    displayCalc(tipAmountPerPerson, totalPerPerson);
+                }
+            }
         }
     }
 }
 
+const displayCalc = (tipC, totC) =>{
+    tip.innerHTML = '$' + tipC;
+    total.innerHTML = '$' +  totC;
+};
 
 
 

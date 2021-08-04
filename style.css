@@ -34,6 +34,7 @@ input {
   text-align: right;
   caret-color: var(--primary-color);
   border-width: 0;
+  cursor: pointer;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
