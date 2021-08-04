@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview for the Tip calculator app coding challenge](./own_tipsCalculator.jpg)
+![Design preview for the Tip calculator app coding challenge](./images/own-tipsCalculator.jpg)
 
 
 ### Links
