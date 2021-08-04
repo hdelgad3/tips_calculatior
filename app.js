@@ -18,17 +18,17 @@ const peopleForm = document.querySelector('.peopleForm');
 const billError = document.querySelector('.errorLabel1');
 const peopleError = document.querySelector('.errorLabel2');
 
-// console.log(billForm.childNodes);
-billForm.removeChild(billError);
-// console.log(billForm.childNodes);
-// billForm.insertBefore(billError, bill);
-// console.log(billForm.childNodes);
+// // console.log(billForm.childNodes);
+// billForm.removeChild(billError);
+// // console.log(billForm.childNodes);
+// // billForm.insertBefore(billError, bill);
+// // console.log(billForm.childNodes);
+// peopleForm.removeChild(peopleError);
 
-let inputBill = 0;
-let inputTip = 0;
-let inputPeople = 0;
-const billValues = [];
-const tipValues = [];
+billError.style.visibility = 'hidden';
+peopleError.style.visibility = 'hidden';
+
+
 
 
 // bill input
@@ -36,70 +36,55 @@ bill.addEventListener('input', (e)=>{
     let key = e.target.value;
     key = parseFloat(key);
     key = Math.round((key + Number.EPSILON)*100)/100;
-    checkBill(key);
+    if(key === 0){
+        billError.style.visibility = 'visible';
+        bill.style.border = '2px solid red';
+    }
+    else{
+        billError.style.visibility = 'hidden';
+        bill.style.border = '2px solid var(--primary-color)';
+        // calculateAmount(key);
+    }
 });
+
 
 // loop through percbtn nodelist and print the value when clicked
 for(let i = 0; i < percBtns.length; i++){
     percBtns[i].addEventListener('click',(e)=>{
-        // console.log(e.currentTarget.value);
         let perc = e.target.dataset.id;
-        console.log(perc);
+        
     })
 }
-
 // custom tip input
 customTip.addEventListener('input',(e)=>{
     let custom = e.target.value;
     custom = parseFloat(custom/100);
-    // console.log(custom);
-    checkTip(custom);
-    // console.log(e.target.dataset);
+    
 });
 
 // amount of people
 people.addEventListener('input',(e)=>{
     let key = e.target.value;
-    console.log(key);
-    console.log(e.target.dataset);
+    key = parseFloat(key);
     if(key === 0){
-       people.setCustomValidity("Can't be zero");
+        peopleError.style.visibility = 'visible';
+        people.style.border = '2px solid red';
+    }
+    else{
+        peopleError.style.visibility = 'hidden';
+        people.style.border = '2px solid var(--primary-color)';
     }
 });
 
-
-// Functions
-
-const checkArray = (arr,val) =>{
-    if(arr.length === 0){
-        arr.push(val);
+const calculateAmount = givenBill =>{
+    console.log(givenBill);
+    return calculateTip = givenTip =>{
+        return calculatePeople =>{
+            console.log('yeaaaa');
+        }
     }
-    else{
-        arr.pop();
-        arr.push(val);
-    }
-    return arr;
 }
 
-const checkBill = val =>{
-    checkArray(billValues, val);
-    //console.log(billValues);
-    inputBill= billValues[0];
-    // console.log(inputBill);
-    if(inputBill === 0){
-        billForm.insertBefore(billError, bill);
-        
-    }
-    else{
-        billForm.removeChild(billError);
-    }  
-};
 
-const checkTip = val =>{
-    checkArray(tipValues, val);
-    inputTip = val;
-    console.log(inputTip);
-    console.log(tipValues);
-};
 
 
